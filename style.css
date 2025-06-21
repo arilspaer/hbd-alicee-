@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe6f0, #ffeedd);
+  font-family: sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.envelope {
+  width: 150px;
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: naik 2s ease-out forwards;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.25)); /* Ganti box-shadow */
+}
+
+.envelope.clicked {
+  transform: translateX(-50%) translateY(-10px) rotate(-3deg);
+}
+
+@keyframes naik {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 40%;
+    opacity: 1;
+  }
+}
+
+.love {
+  position: absolute;
+  opacity: 0;
+  transition: all 1.2s ease;
+  z-index: 10;
+}
+
+/* LOVE ATAS */
+.love1 {
+  top: 0;
+  left: 20%;
+  font-size: 24px;
+  transform: translateY(-60px) rotate(-10deg);
+}
+
+.love2 {
+  top: 0;
+  left: 48%;
+  font-size: 36px;
+  transform: translateY(-80px) rotate(5deg);
+}
+
+.love3 {
+  top: 0;
+  left: 75%;
+  font-size: 28px;
+  transform: translateY(-70px) rotate(15deg);
+}
+
+/* LOVE BAWAH */
+.love4 {
+  bottom: 0;
+  left: 25%;
+  font-size: 34px;
+  transform: translateY(60px) rotate(-8deg);
+}
+
+.love5 {
+  bottom: 0;
+  left: 50%;
+  font-size: 26px;
+  transform: translateY(80px) rotate(10deg);
+}
+
+.love6 {
+  bottom: 0;
+  left: 68%;
+  font-size: 30px;
+  transform: translateY(70px) rotate(-12deg);
+}
+
+/* Efek muncul */
+.show-love.love1 {
+  transform: translateY(30px) rotate(-10deg);
+  opacity: 1;
+}
+
+.show-love.love2 {
+  transform: translateY(40px) rotate(5deg);
+  opacity: 1;
+}
+
+.show-love.love3 {
+  transform: translateY(35px) rotate(15deg);
+  opacity: 1;
+}
+
+.show-love.love4 {
+  transform: translateY(-40px) rotate(-8deg);
+  opacity: 1;
+}
+
+.show-love.love5 {
+  transform: translateY(-30px) rotate(10deg);
+  opacity: 1;
+}
+
+.show-love.love6 {
+  transform: translateY(-35px) rotate(-12deg);
+  opacity: 1;
+}
+.envelope {
+  transition: all 0.5s ease-in-out;
+}
